@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="comentarios"></div>
+  <p>hola  &#9475; como estas,  <h1>&#9836; Strike a Chord &#9836;</h1> </p>
+  <p>Home &nbsp; &#9632; &nbsp;
+    Link 1 &nbsp; &#9632; &nbsp;
+    Link 2 &nbsp; &#9632; &nbsp;
+    Link 3</p>
+
+    <p>Home &nbsp; &#9838; &nbsp;
+      Lessons &nbsp; &#9838; &nbsp;
+      Instructors &nbsp; &#9838; &nbsp;
+      Rentals &nbsp; &#9838; &nbsp;
+      Contact</p>
+
+      <p>Home &nbsp; &#9672; &nbsp;
+        About Us &nbsp; &#9672; &nbsp;
+        Partnership &nbsp; &#9672; &nbsp;
+        Gallery &nbsp; &#9672; &nbsp;
+        FAQs &nbsp; &#9672; &nbsp;
+        Contact</p>
+
+    <script>
+        // Comentarios cortos
+        var comentarios = [
+            '¡Excelente trabajo!',
+            'Buen artículo.',
+            'Muy útil, gracias.',
+            '¡Gran consejo!',
+            'Esto me ayudó mucho.'
+        ];
+
+        // Función para mostrar un comentario aleatorio
+        function mostrarComentario() {
+            var comentarioAleatorio = comentarios[Math.floor(Math.random() * comentarios.length)];
+            var contenedor = document.getElementById('comentarios');
+            contenedor.textContent = comentarioAleatorio;
+        }
+
+        // Mostrar un comentario aleatorio inicialmente
+        mostrarComentario();
+
+        // Cambiar el comentario cada 3 segundos
+        setInterval(mostrarComentario, 3000);
+    </script>
+</body>
+</html>
